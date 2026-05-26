@@ -35,3 +35,8 @@ Installed:
 - git commit -m "message" — save changes in Git
 - git push -u origin main — send changes to GitHub
 - git checkout -b branch-name — create and switch to a new branch
+## Running Java Exercises
+
+Current exercises are located in:
+
+src/main/java/basics
