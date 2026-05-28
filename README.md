@@ -48,6 +48,8 @@ Completed exercises:
 - SimpleCalculationExercise
 - MathOperatorsExercise
 - ConditionExercise
+- String methods
+- Scanner and user input
 
 Run from IntelliJ IDEA:
 - Open a Java class
