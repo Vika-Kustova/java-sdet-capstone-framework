@@ -11,5 +11,6 @@ public class VariablesExercise {
         System.out.println(age);
         System.out.println(weight);
         System.out.println(likesIceCream);
+        System.out.println("Amigo");
     }
 }
