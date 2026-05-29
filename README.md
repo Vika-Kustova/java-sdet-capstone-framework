@@ -50,6 +50,8 @@ Completed exercises:
 - ConditionExercise
 - String methods
 - Scanner and user input
+- String validation
+- Basic loops
 
 Run from IntelliJ IDEA:
 - Open a Java class
