@@ -15,15 +15,14 @@ Installed:
 
 ## Learning Log
 
-### Day 1
-
+### 
 - Installed Java 21
 - Installed IntelliJ IDEA
 - Created GitHub repository
 - Cloned repository locally
 - Learned basic Git commands
 
-## Useful Commands
+## Useful Commands Git
 
 - mkdir folder-name — create a new folder
 - pwd — show current folder
@@ -48,10 +47,20 @@ Completed exercises:
 - SimpleCalculationExercise
 - MathOperatorsExercise
 - ConditionExercise
-- String methods
-- Scanner and user input
-- String validation
-- Basic loops
+- StringMethodsExercise
+- ScannerExercise
+- LoopExercise
+- ArraysExercise
+
+Practiced:
+
+- Variables and data types
+- Arithmetic and logical operators
+- Conditional statements (if, else)
+- Loops (for, while)
+- Array indexing
+- Sum calculation
+- Minimum and maximum value search
 
 Run from IntelliJ IDEA:
 - Open a Java class
