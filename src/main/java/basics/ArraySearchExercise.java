@@ -1,6 +1,9 @@
 package basics;
+
 import java.util.Scanner;
+
 public class ArraySearchExercise {
+
   public static void main(String[] args) {
 
     //find a number
@@ -14,12 +17,13 @@ public class ArraySearchExercise {
       return;
     }
 
-    int y=input.nextInt();
+    int y = input.nextInt();
     boolean found = false;
-    for (int i = 0; i<numbers.length; i++){
-    if (numbers[i]==y) {
-      found = true ;
-    }}
+    for (int i = 0; i < numbers.length; i++) {
+      if (numbers[i] == y) {
+        found = true;
+      }
+    }
     if (found == true) {
       System.out.println("Number found");
     } else {
@@ -27,22 +31,23 @@ public class ArraySearchExercise {
     }
 
     // find index
-int index=-1;
+    int index = -1;
     int[] array = {5, 12, 7, 20, 3, 15};
     System.out.print("Enter number: ");
     if (!input.hasNextInt()) {
       System.out.println("Invalid number");
       return;
     }
-    int targetNumber=input.nextInt();
+    int targetNumber = input.nextInt();
 
-    for (int x = 0; x<array.length; x++){
-      if (array[x]==targetNumber){
-        index=x;
+    for (int x = 0; x < array.length; x++) {
+      if (array[x] == targetNumber) {
+        index = x;
         break;
-      }}
-    if (index !=-1) {
-      System.out.print("Index found = "+index);
+      }
+    }
+    if (index != -1) {
+      System.out.print("Index found = " + index);
     } else {
       System.out.print("Index not found");
     }
