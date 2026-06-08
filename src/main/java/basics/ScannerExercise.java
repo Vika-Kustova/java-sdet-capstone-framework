@@ -1,21 +1,22 @@
 package basics;
 
 import java.util.Scanner;
+
 public class ScannerExercise {
-    public static void main(String[] args){
-       Scanner input = new Scanner(System.in);
 
-       System.out.print("Enter name: ");
-       String name = input.nextLine();
-       while (name.isBlank()|| !name.matches ("[a-zA-Zа-яА-я]+")){  //  || or
-           System.out.println("Enter a valid name: ");
-           name = input.nextLine();
-       }
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
 
-       System.out.println("Name: "+name);
+    System.out.print("Enter name: ");
+    String name = input.nextLine();
+    while (name.isBlank() || !name.matches("[a-zA-Zа-яА-я]+")) {  //  || or
+      System.out.println("Enter a valid name: ");
+      name = input.nextLine();
+    }
 
+    System.out.println("Name: " + name);
 
-       System.out.print("Enter age: ");
+    System.out.print("Enter age: ");
         /*if (input.hasNextInt()){
 
        int age = input.nextInt();
@@ -43,16 +44,15 @@ public class ScannerExercise {
         }
 
         int age = input.nextInt(); */
-        String aget = input.nextLine();
-        while (!aget.matches("\\d+")) {
-            System.out.print("Please enter a number.");
-            aget = input.nextLine();
-        }
-        int age = Integer.parseInt(aget);
-
-
-        System.out.println("Age: " + age);
+    String aget = input.nextLine();
+    while (!aget.matches("\\d+")) {
+      System.out.print("Please enter a number.");
+      aget = input.nextLine();
     }
+    int age = Integer.parseInt(aget);
+
+    System.out.println("Age: " + age);
+  }
 
        /* String str = "10 20 40 60";
         Scanner scanner = new Scanner(str);
@@ -61,5 +61,5 @@ public class ScannerExercise {
         int с = scanner.nextInt();
 
         System.out.println(a + b + с);*/
-    }
+}
 

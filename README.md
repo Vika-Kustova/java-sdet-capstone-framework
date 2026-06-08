@@ -21,6 +21,7 @@ Installed:
 - Created GitHub repository
 - Cloned repository locally
 - Learned basic Git commands
+- Practiced debugging in IntelliJ IDEA
 
 ## Useful Commands Git
 
@@ -51,6 +52,7 @@ Completed exercises:
 - ScannerExercise
 - LoopExercise
 - ArraysExercise
+- DebuggingExercise
 
 Practiced:
 
@@ -61,6 +63,12 @@ Practiced:
 - Array indexing
 - Sum calculation
 - Minimum and maximum value search
+
+Implemented methods:
+
+- square(); sum(); multiply(); isEven(); sumArray();
+findMaxMin(); contains(); findIndex(); countOccurrences();
+areArraysEqual()
 
 Run from IntelliJ IDEA:
 - Open a Java class
