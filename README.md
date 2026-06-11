@@ -74,8 +74,30 @@ Run from IntelliJ IDEA:
 - Open a Java class
 - Run the class using the green ▶ button
 
+Task 2 – OOP and Collections
+
+Completed:
+
+- Created domain model classes:
+User
+Room
+Booking
+BookingStatus (enum)
+- Implemented constructors for domain models.
+- Learned object relationships (Booking contains User and Room objects).
+- Implemented the Validatable interface and booking validation.
+- Created BookingService for managing bookings.
+- Introduced Java collections:
+List
+ArrayList
+- Implemented booking storage using a List.
+- Added and managed multiple Booking objects through BookingService.
+- Practiced object creation, method parameters, and object interaction.
+- Explored object output and toString() usage.
+
 Run from terminal:
 
 ```bash
 javac src/main/java/basics/HelloWorldExercise.java
 java -cp src/main/java basics.HelloWorldExercise
+
