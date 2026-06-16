@@ -8,16 +8,25 @@ public static void main (String[] args){
   User user1= new User ("Den", "den@test.com", 28);
   Room room1 = new Room(103,"Standard");
 
+  User user2= new User ("Alex", "alex@test.com", 28);
+  Room room2 = new Room(101,"Standard");
+
   Booking booking1=new Booking(user,room,BookingStatus.CREATED);
   Booking booking2=new Booking(user1,room1,BookingStatus.CONFIRMED);
+  Booking booking3=new Booking(user2,room2,BookingStatus.CREATED);
   BookingService service = new BookingService();
   service.addBooking(booking1);
   service.addBooking(booking2);
-  System.out.println("name: "+booking1.user.name+"; room: "+booking1.room.roomNumber+"; status: "+booking1.status);
-  System.out.println(booking1.isValid());
-  System.out.println(booking1);
-  System.out.println(service);
+  service.addBooking(booking3);
+  service.printAllBookings();
+  service.findBookingsByUser(user1);
+  service.findBookingsByName("Alex");
+  //System.out.println("name: "+booking1.user.name+"; room: "+booking1.room.roomNumber+"; status: "+booking1.status);
+  //System.out.println(booking1.isValid());
+  //System.out.println(booking1);
+  //System.out.println(service);
   //System.out.println(service.bookings);
+
 
 }
 }

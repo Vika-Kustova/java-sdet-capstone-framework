@@ -1,6 +1,6 @@
 package oop;
 
-public class UserExercise {
+public class UserExerciseTrainee {
   public static void main(String[] args) {
    /* User user1 = new User();
     user1.name = "Vika";

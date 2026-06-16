@@ -1,5 +1,5 @@
 package basics;
-
+import java.util.Arrays;
 public class ArraysExercise {
 
   public static void main(String[] args) {
@@ -31,6 +31,35 @@ public class ArraysExercise {
     for (int s = 0; s < sen.length; s++) {
       System.out.print(sen[s] + " , ");
     }
+    System.out.println ();
+    // arrays.sort
+    int[] scores = {5, 12, 7, 20, 3, 15};
+    Arrays.sort(scores); //сортируем по возрастанию
+    System.out.println ("Sorting in ascending order: "+Arrays.toString(scores));
+
+    String[] names = {"Вася", "Петя", "Аня", "Игорь"};
+    Arrays.sort(names);
+
+    System.out.println(Arrays.toString(names));
+
+    int[] arr = {7, 5, 3, 1, 9, 8};
+    Arrays.sort(arr, 1, 4); // сортирует элементы с индекса 1 до 3 включительно (4 не включается)
+
+    System.out.println(Arrays.toString(arr));
+
+    //fill
+    int[] marks = new int[10];
+    Arrays.fill(marks, 3); // Все элементы теперь равны 3
+    System.out.println(Arrays.toString(marks));
+    Arrays.fill(marks,2,5,7);
+    System.out.println(Arrays.toString(marks));
+    int[] copy = Arrays.copyOf(marks, 5);
+    System.out.println(Arrays.toString(copy));
+    int[] mid = Arrays.copyOfRange(arr, 1, 4); // Скопирует элементы с индекса 1 по 3
+    System.out.println(Arrays.toString(mid));
+
+    int [] arr2 = {1,3,5};
+    System.out.println(Arrays.equals(mid,arr2));
 
   }
 }

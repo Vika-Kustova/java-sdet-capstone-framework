@@ -94,6 +94,9 @@ ArrayList
 - Added and managed multiple Booking objects through BookingService.
 - Practiced object creation, method parameters, and object interaction.
 - Explored object output and toString() usage.
+- Implemented numbered booking list output using List indexing.
+- Practiced using List.size() and List.get(index).
+- Implemented booking search by user.
 
 Run from terminal:
 

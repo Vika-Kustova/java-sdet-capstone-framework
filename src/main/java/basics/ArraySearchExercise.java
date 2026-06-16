@@ -51,5 +51,6 @@ public class ArraySearchExercise {
     } else {
       System.out.print("Index not found");
     }
+
   }
 }
