@@ -77,7 +77,7 @@ Run from IntelliJ IDEA:
 - Open a Java class
 - Run the class using the green ▶ button
 
-Task 2 – OOP and Collections
+## Task 2  – OOP and Collections
 
 Completed:
 
@@ -107,11 +107,12 @@ ArrayList
 - Implemented booking search by user.
 
 
-Task 3 JUnit and Gradle
+## Task 3  JUnit and Gradle
 Implemented:
 - Calculator class
 - CalculatorTest
-  Practiced:
+
+Practiced:
 
 - Unit tests
 - `@Test`
