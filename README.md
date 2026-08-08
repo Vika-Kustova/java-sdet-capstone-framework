@@ -12,6 +12,8 @@ Installed:
 - Git
 - IntelliJ IDEA Community
 - GitHub account
+- Gradle
+- JUnit 5
 
 ## Learning Log
 
@@ -22,6 +24,7 @@ Installed:
 - Cloned repository locally
 - Learned basic Git commands
 - Practiced debugging in IntelliJ IDEA
+- Unit Testing (JUnit 5)
 
 ## Useful Commands Git
 
@@ -79,10 +82,15 @@ Task 2 – OOP and Collections
 Completed:
 
 - Created domain model classes:
-User
-Room
-Booking
-BookingStatus (enum)
+User;
+Room;
+Booking;
+BookingStatus (enum);
+Validatable;
+BookingService;
+BookingExercise;
+ListExercise;
+Invalid BookingException;
 - Implemented constructors for domain models.
 - Learned object relationships (Booking contains User and Room objects).
 - Implemented the Validatable interface and booking validation.
@@ -98,9 +106,24 @@ ArrayList
 - Practiced using List.size() and List.get(index).
 - Implemented booking search by user.
 
+
+Task 3 JUnit and Gradle
+Implemented:
+- Calculator class
+- CalculatorTest
+  Practiced:
+
+- Unit tests
+- `@Test`
+- `@BeforeEach`
+- Assertions (`assertEquals`)
+- Arrange–Act–Assert (AAA) pattern
+
 Run from terminal:
 
 ```bash
 javac src/main/java/basics/HelloWorldExercise.java
 java -cp src/main/java basics.HelloWorldExercise
+
+
 
