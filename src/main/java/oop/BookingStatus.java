@@ -1,7 +1,7 @@
 package oop;
 
 public enum BookingStatus {
-CREATED,
+  CREATED,
   CONFIRMED,
   CANCELLED
 }
