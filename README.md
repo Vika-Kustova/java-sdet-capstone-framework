@@ -17,7 +17,6 @@ Installed:
 
 ## Learning Log
 
-### 
 - Installed Java 21
 - Installed IntelliJ IDEA
 - Created GitHub repository
@@ -106,25 +105,43 @@ ArrayList
 - Practiced using List.size() and List.get(index).
 - Implemented booking search by user.
 
+Run from terminal:
 
-## Task 3  JUnit and Gradle
+```bash
+javac src/main/java/basics/HelloWorldExercise.java
+java -cp src/main/java basics.HelloWorldExercise
+```
+
+## Task 3 – JUnit and Gradle
 Implemented:
-- Calculator class
 - CalculatorTest
+- BookingServiceTest
+- UserTest (User validation)
+- RoomTest (Room validation)
 
 Practiced:
 
 - Unit tests
 - `@Test`
 - `@BeforeEach`
-- Assertions (`assertEquals`)
+- Assertions (`assertEquals`, `assertThrows`, `assertTrue`, `assertFalse`)
 - Arrange–Act–Assert (AAA) pattern
+- Added parameterized tests using  `@ParameterizedTest`, `@CsvSource` and `@MethodSource`
+- Added helper method for creating test bookings 
+- Added positive, negative, and boundary test cases
 
-Run from terminal:
+### Run Tests
+
+From IntelliJ IDEA:
+
+- Run an individual test using the green ▶ button.
+- Run a test class using the green ▶ button next to the class.
+
+From the project root in the terminal:
 
 ```bash
-javac src/main/java/basics/HelloWorldExercise.java
-java -cp src/main/java basics.HelloWorldExercise
+./gradlew test
+```
 
 
 

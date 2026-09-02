@@ -7,7 +7,10 @@ import java.util.HashMap;
 
 public class BookingService {
 
-  List<Booking> bookings = new ArrayList<>();// принадлежит объекту BookingService
+  private List<Booking> bookings = new ArrayList<>();// принадлежит объекту BookingService
+  public List<Booking> getBookings() {
+    return bookings;
+  }
 
   public void addBooking(Booking newbooking) {
     if (!newbooking.isValid()) {

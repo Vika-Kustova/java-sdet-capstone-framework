@@ -1,8 +1,11 @@
+// старый вариант тестов до рефакторинга
 package oop;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.util.List;
+import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -20,7 +23,7 @@ public class BookingServiceLearningTest {
   void setUp() {
     user = new User("Alex", "alex@test.com", 28);
     room = new Room(101, RoomType.STANDARD);
-
+    booking = new Booking(user, room, BookingStatus.CREATED);
     service = new BookingService();
   }
 
@@ -32,7 +35,7 @@ public class BookingServiceLearningTest {
         InvalidBookingException.class,//что ожидаем
         () -> service.addBooking(invalidBooking) // что нужно запустить. ()-> лямбда "выполни"
     );
-    assertEquals(0, service.bookings.size());
+    assertEquals(0, service.getBookings().size());
   }
 
 
@@ -41,7 +44,7 @@ public class BookingServiceLearningTest {
     Booking invalidBooking = new Booking(user, null, BookingStatus.CREATED);
 
     assertThrows(InvalidBookingException.class, () -> service.addBooking(invalidBooking));
-    assertEquals(0, service.bookings.size());
+    assertEquals(0, service.getBookings().size());
   }
 
   // Parameterized Test @ValueSource
@@ -86,5 +89,53 @@ public class BookingServiceLearningTest {
     int result = service.countBookingsByStatus(status);
     //Assert
     assertEquals(expectedCount, result);
+  }
+
+  @Test
+  void shouldTestCountByStatus() {
+    service.addBooking(booking);
+    User user1 = new User("Den", "den@test.com", 10);
+    Room room1 = new Room(103, RoomType.SUITE);
+    Booking booking1 = new Booking(user1, room1, BookingStatus.CONFIRMED);
+    service.addBooking(booking1);
+    User user2 = new User("Kamil", "kamil@test.com", 2);
+    Room room2 = new Room(103, RoomType.STANDARD);
+    Booking booking2 = new Booking(user2, room2, BookingStatus.CREATED);
+    service.addBooking(booking2);
+
+    assertEquals(0, service.countBookingsByStatus(BookingStatus.CANCELLED));
+  }
+
+  @Test
+  void shouldGroupBookingsByDifferentStatuses() {
+    service.addBooking(booking);
+    User user1 = new User("Den", "den@test.com", 10);
+    Room room1 = new Room(103, RoomType.STANDARD);
+    Booking booking1 = new Booking(user1, room1, BookingStatus.CONFIRMED);
+
+    service.addBooking(booking1);
+
+    User user2 = new User("Kamil", "kamil@test.com", 2);
+    Room room2 = new Room(103, RoomType.STANDARD);
+    Booking booking2 = new Booking(user2, room2, BookingStatus.CREATED);
+
+    service.addBooking(booking2);
+    Map<BookingStatus, List<Booking>> result = service.groupBookingsByStatus();
+    assertEquals(2, result.get(BookingStatus.CREATED).size());
+    assertEquals(1, result.get(BookingStatus.CONFIRMED).size());
+    assertEquals(2, result.size());
+  }
+
+  @Test
+  void shouldGroupCreatedBookings() {
+    service.addBooking(booking);
+    User user1 = new User("Den", "alex@test.com", 28);
+    Room room1 = new Room(103, RoomType.STANDARD);
+    Booking booking1 = new Booking(user1, room1, BookingStatus.CREATED);
+
+    service.addBooking(booking1);
+    Map<BookingStatus, List<Booking>> result = service.groupBookingsByStatus();
+    assertEquals(2, result.get(BookingStatus.CREATED).size());
+    assertEquals(1, result.size());
   }
 }
